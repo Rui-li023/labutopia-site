@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="LabUtopia: A high-fidelity simulation and hierarchical benchmark for developing scientific embodied agents in automated laboratory settings.">
+  <meta name="keywords" content="LabUtopia, Embodied AI, Laboratory Automation, Simulation, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <!-- <a class="navbar-item" href="https://shlab.ai">
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+      </a> -->
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://example.com/project1">
+            Project 1
+          </a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://rui-li023.github.io/">Rui Li</a><sup>1,*</sup>,</span>
+            <span class="author-block">Zixuan Hu<sup>2,*</sup>,</span>
+            <span class="author-block">Wenxi Qu<sup>1,*</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=wcUBSRgAAAAJ&hl=zh-CN">Jinouwen Zhang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://yinzhenfei.github.io/">Zhenfei Yin</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=AmD8wZ0AAAAJ&hl=zh-CN">Sha Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">Xuantuo Huang<sup>2</sup>,</span>
+            <span class="author-block"><a href="https://hanqingwangai.github.io/">Hanqing Wang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://tai-wang.github.io/">Tai Wang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://oceanpang.github.io/">Jiangmiao Pang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://wlouyang.github.io/saved_resource.htm">Wanli Ouyang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="http://leibai.site/">Lei Bai</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://homepage.hit.edu.cn/wangmengzuo">Wangmeng Zuo</a><sup>5</sup>,</span>
+            <span class="author-block"><a href="https://cs.pku.edu.cn/info/1236/2142.htm">Ling-Yu Duan</a><sup>2,✉</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=Ox6SxpoAAAAJ">Dongzhan Zhou</a><sup>1,✉</sup>,</span>
+            <span class="author-block"><a href="https://tangshixiang.github.io/">Shixiang Tang</a><sup>1,4,✉</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Shanghai AI Laboratory,</span>
+            <span class="author-block"><sup>2</sup>Peking University,</span>
+            <span class="author-block"><sup>3</sup>Oxford,</span>
+            <span class="author-block"><sup>4</sup>The Chinese University of Hong Kong,</span>
+            <span class="author-block"><sup>5</sup>Harbin Institute of Technology</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            <span class="author-block"><sup>✉</sup>Equal Advising</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2505.22634v1.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2505.22634" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link -->
+              <!-- <span class="link-block">
+                <a href="[INSERT_VIDEO_URL_HERE]" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Dataset Link -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" src="./static/images/teaser.png" autoplay muted loop playsinline height="100%">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">LabUtopia</span> enables high-fidelity simulation of laboratory environments for training and evaluating scientific embodied agents.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-labscene">
+          <video poster="" id="labscene" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/labscene.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-labsim">
+          <video poster="" id="labsim" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/labsim.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-labbench">
+          <video poster="" id="labbench" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/labbench.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-manipulation">
+          <video poster="" id="manipulation" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/manipulation.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-navigation">
+          <video poster="" id="navigation" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/navigation.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Scientific embodied agents play a crucial role in modern laboratories by automating complex experimental workflows.
+          Compared to typical household environments, laboratory settings impose significantly higher demands on perception of physical-chemical transformations and long-horizon planning, making them an ideal testbed for advancing embodied intelligence.
+          However, its development has been long hampered by the lack of suitable simulator and benchmarks.
+          In this paper, we address this gap by introducing LabUtopia, a comprehensive simulation and benchmarking suite designed to facilitate the development of generalizable, reasoning-capable embodied agents in laboratory settings. 
+          Specifically, it integrates i) LabSim, a high-fidelity simulator supporting multi-physics and chemically meaningful interactions; ii) LabScene, a scalable procedural generator for diverse scientific scenes; and iii) LabBench, a hierarchical benchmark spanning five levels of complexity from atomic actions to long-horizon mobile manipulation. 
+          LabUtopia supports 30 distinct tasks and includes more than 200 scene and instrument assets, enabling large-scale training and principled evaluation in high-complexity environments.
+          We demonstrate that LabUtopia offers a powerful platform for advancing the integration of perception, planning, and control in scientific-purpose agents and provides a rigorous testbed for exploring the practical capabilities and generalization limits of embodied intelligence in future research.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+
+    <!-- Paper video -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://drive.google.com/file/d/1NPH3Vg26KzTnbu_DVKXn7cQcGJqcuHIr/view" style="width:100%; height:600px; border:0;"></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop"> 
+    <div class="column is-centered">
+      <div class="content">
+        <h2 class="title is-3"><img src="static/images/highlight_logo.png" alt="Highlight Icon" width="40"> Highlights</h2>
+      </div>
+        <ul class="highlights" style="list-style-type: disc; font-size: 1.2em;">
+          <li>
+            <span>
+              <strong>Comprehensive Simulation Suite:</strong> LabUtopia introduces a high-fidelity simulation and benchmarking platform tailored for scientific embodied agents, integrating <strong style="color: #ff932f;">LabSim</strong>, <strong style="color: #ff932f;">LabScene</strong>, and <strong style="color: #ff932f;">LabBench</strong> to support complex laboratory tasks.
+            </span>
+          </li>
+          <li><strong>LabSim:</strong> A high-fidelity simulator built on Isaac Sim, enhanced with a chemical engine to model <strong>reaction-driven transformations</strong> (e.g., color changes, product generation), enabling precise simulation of physical and chemical interactions.</li>
+          <li><strong>LabScene:</strong> A procedural generation pipeline that creates diverse, physically plausible 3D laboratory scenes with over <strong>100 laboratory scenes</strong> and <strong>100 instrument assets</strong>, verified by domain experts for realistic training environments.</li>
+          <li><strong>LabBench:</strong> A hierarchical benchmark with <strong>five levels of task complexity</strong>, spanning from atomic manipulations to long-horizon mobile manipulation tasks, covering <strong>30 distinct tasks</strong> for rigorous evaluation of embodied agents.</li>
+        </ul>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- LabSim -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">LabSim</h2>
+        <div class="content">
+          <p>
+            <span class="dnerf">LabSim</span> is a high-fidelity simulation environment built on Isaac Sim, enhanced with a chemical engine that models reaction-driven transformations (e.g., color change, product generation). It supports rigid, deformable, and fluid objects, as well as chemical reactions, enabling precise simulation of laboratory phenomena.
+          </p>
+          <div class="content has-text-centered">
+          <img src="./static/images/labsim.png" alt="LabSim Demo Image" width="75%">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ LabSim -->
+
+    <!-- LabScene -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">LabScene</h2>
+        <div class="content has-text-justified">
+          <p>
+            <span class="dnerf">LabScene</span> is a procedural generation pipeline that synthesizes diverse, physically plausible 3D laboratory scenes. Built upon expert-verified assets, it employs a hybrid layout strategy to create scalable environments for training and evaluating embodied agents.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="labscene-demo" controls muted preload playsinline width="75%">
+            <source src="./static/videos/instruction.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ LabScene -->
+
+    <!-- LabBench -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">LabBench</h2>
+        <div class="content has-text-justified">
+          <p>
+            <span class="dnerf">LabBench</span> is a hierarchical benchmark featuring a five-level task structure, from atomic manipulations to long-horizon mobile manipulation tasks. It includes over 50 tasks to evaluate agents’ perception, planning, and control capabilities in realistic laboratory settings.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img controls muted preload playsinline width="75%" src="./static/images/labbench.png" alt="LabBench Demo Image">
+        </div>
+        <div class="content has-text-centered">
+          <video id="labbench-demo" controls muted preload playsinline width="75%">
+            <source src="./static/videos/action.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ LabBench -->
+    <!-- Related Work -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+        <div class="content has-text-justified">
+          <p>
+            Several excellent works have been introduced in parallel to ours, advancing the field of laboratory automation and embodied AI.
+          </p>
+          <p>
+            <a href="https://www.nature.com/articles/s44160-023-00276-7">The rise of self-driving labs</a> discusses the automation of repetitive tasks in chemical and materials sciences.
+          </p>
+          <p>
+            <a href="https://www.science.org/doi/10.1126/sciadv.abo2626">AI-EDISON</a> and <a href="https://www.nature.com/articles/ncomms15733">Reactivity Explorer</a> focus on autonomous chemical synthesis and optimization.
+          </p>
+          <p>
+            Check out other advancements in embodied AI and laboratory automation for additional context.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Related Work -->
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{li2025labutopia,
+  author    = {Li, Rui and Hu, Zixuan and Qu, Wenxi and Zhang, Jinouwen and Yin, Zhenfei and Zhang, Sha and Huang, Xuantuo and Wang, Hanqing and Wang, Tai and Pang, Jiangmiao and Ouyang, Wanli and Bai, Lei and Zuo, Wangmeng and Duan, Ling-Yu and Zhou, Dongzhan and Tang, Shixiang},
+  title     = {LabUtopia: High-Fidelity Simulation and Hierarchical Benchmark for Scientific Embodied Agents},
+  journal   = {arXiv preprint arXiv:2505.22634},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://arxiv.org/pdf/2505.22634v1.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://rui-li023.github.io/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website, we just ask that you link back to this page in the footer. Please remember to remove the analytics code included in the header of the website which you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
